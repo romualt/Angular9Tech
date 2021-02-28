@@ -1,0 +1,55 @@
+<form #formUpdate="ngForm" *ngIf="personne">
+    <div class="alert alert-danger" *ngIf="isMsgRetour">{{ messageRetour }}</div>
+
+    <label for="name">Name</label>
+    <input id="name" 
+        required
+        type="text" class="form-control" 
+        #nameInput="ngModel"
+        [(ngModel)]="personne.name" name="name">
+    <div class="alert alert-danger" *ngIf="nameInput.invalid && nameInput.dirty">vous devez saisir le nom</div>
+    
+    <label for="firstname">FirstName</label>
+    <input id="firstname" 
+        required
+        type="text" class="form-control"  
+        #firstnameInput="ngModel"
+         [(ngModel)]="personne.firstname" name="firstname">
+    <div class="alert alert-danger" *ngIf="firstnameInput.invalid && firstnameInput.dirty">vous devez saisir le prénom</div>
+    
+    <label for="job">Job</label>
+    <input id="job" 
+        required
+        type="text" class="form-control"  
+        #jobInput="ngModel"
+        [(ngModel)]="personne.job" name="job">
+    <div class="alert alert-danger" *ngIf="jobInput.invalid && jobInput.dirty">vous devez saisir le job</div>
+    
+    <label for="age">Age</label>
+    <input id="age" 
+        required
+        type="number" 
+        min="0"
+        max="110"
+        #ageInput="ngModel"
+        class="form-control"  
+        [(ngModel)]="personne.age" name="age">
+    <div class="alert alert-danger" *ngIf="ageInput.invalid && ageInput.dirty">vous devez saisir le job</div>
+   
+    <label for="cin">CIN</label>
+    <input id="cin" 
+        required
+        type="number" 
+        #cinInput="ngModel"
+        class="form-control"  
+        [(ngModel)]="personne.cin" name="cin">
+    <div class="alert alert-danger" *ngIf="cinInput.invalid && cinInput.dirty">vous devez saisir le job</div>
+
+    <label for="path">Photo</label>
+    <input id="path" 
+        type="path" 
+        class="form-control"  
+        [(ngModel)]="personne.path" name="path">
+
+    <button class="btn btn-primary" [disabled]="formUpdate.invalid" (click)="updatePersonne()">Update</button>
+</form> 

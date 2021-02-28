@@ -1,0 +1,13 @@
+<!-- <app-child-a (sendRequestToData)="processRequest($event)" [childaproperty]="color"></app-child-a> -->
+
+<div [style.backgroundColor]="color">
+    color
+</div>
+<input [(ngModel)]="color"
+
+type="text" class="form_control">
+
+le contenu de la proprité color est {{ color }}
+<button (click)="loggerMesData()" class="btn btn-danger">Logger</button>
+<br>
+<a (click)="goToCv()">Go to CV</a>

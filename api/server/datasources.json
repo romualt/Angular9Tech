@@ -1,0 +1,16 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "rfk": {
+    "host": "localhost",
+    "port": "3306",
+    "url": "",
+    "database": "anguforma",
+    "password": "",
+    "name": "rfk",
+    "user": "root",
+    "connector": "mysql"
+  }
+}
