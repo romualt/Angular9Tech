@@ -22,7 +22,7 @@ export class DetailCvComponent implements OnInit {
     this.embaucheService.embauche(this.personne);
   }
 
-  debauche(personne): void{
+  debauche(): void{
     this.embaucheService.debauche(this.personne);
   }
   
