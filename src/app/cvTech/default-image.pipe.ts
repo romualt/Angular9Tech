@@ -7,7 +7,7 @@ import { CvComponent } from './cv/cv.component';
 export class DefaultImagePipe implements PipeTransform {
 
   transform(value: any, ...args: any[]): any {
-    if(!value){
+    if(value==null || value==""){
       return 'cv.jpg';
     } 
     return value;
